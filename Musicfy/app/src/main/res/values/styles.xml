@@ -1,9 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="txt_cadastrado">Cadastrado com sucesso!</string>
-    <string name="txt_filme">
-        Nome da musica:  %1$s,
-        Artista: %2$s,
-        Album:  %3$s
-    </string>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/purple</item>
+        <item name="colorPrimaryVariant">@color/lightPurple</item>
+        <item name="colorOnPrimary">@color/text_purple_base</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/green</item>
+        <item name="colorSecondaryVariant">@color/anotherGreen</item>
+        <item name="colorOnSecondary">@color/text_in_purple</item>
+
+    </style>
+
+    <style name="Titulo"  parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/text_purple_base</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">25dp</item>
+        <item name="android:layout_marginLeft">25dp</item>
+    </style>
+
+    <style name="Slogan"  parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/purpleDark</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">25dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+    </style>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!--  BOTAO  -->
+    <style name="Botao">
+        <item name="android:textColor">#fff</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <!--  TEXTO  -->
+    <style name="TextoLista">
+    <item name="android:textAllCaps">true</item>
+    <item name="android:textSize">14sp</item>
+    </style>
+
+
+    <style name="Input">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/purpleDark</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:padding">15sp</item>
+        <item name="android:layout_marginStart">25dp</item>
+        <item name="android:layout_marginEnd">25dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
 </resources>

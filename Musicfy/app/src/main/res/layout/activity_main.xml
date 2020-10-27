@@ -1,43 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/backgroundColor"
+    android:orientation="vertical">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:backgroundTint="@color/purple"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ll_conteudo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/tv_titulo"
+            style="@style/Titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo"
+            tools:ignore="MissingConstraints" />
+    </com.google.android.material.appbar.AppBarLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"
         android:id="@+id/tv_topo"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:visibility="gone"/>
+
 
     <TextView
-        android:id="@+id/tv_titulo"
+        android:id="@+id/tv_Slogan"
+        style="@style/Slogan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Minhas Músicas"
-        tools:ignore="MissingConstraints"
-        />
+        android:text="@string/slogan"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="207dp" />
 
-    <ScrollView
+    <ImageView
+        android:id="@+id/landingImg"
+        android:layout_width="413dp"
+        android:layout_height="334dp"
+        android:contentDescription="teste"
+        android:scaleType="fitCenter"
+
+        android:src="@mipmap/landingimage"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="290dp" />
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tv_topo">
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="624dp">
 
-        <LinearLayout
-            android:id="@+id/ll_conteudo"
-            android:layout_width="match_parent"
+
+        <Button
+            android:id="@+id/bt_minhas_musicas"
+            style="@style/Botao"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_alignParentLeft="true"
+            android:text="@string/minhas_musicas"
+            android:onClick="irBuscarMusicas"
 
-        </LinearLayout>
+            />
+
+        <Button
+            android:id="@+id/bt_add_musicas"
+            style="@style/Botao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/add_musicas"
+            android:onClick="irAdicionarMusica"
+
+            />
+    </RelativeLayout>
 
 
-    </ScrollView>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

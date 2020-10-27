@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">Musicfy</string>
+
+    <string name="txt_cadastrado">Cadastrado com sucesso!</string>
+    <string name="txt_musica">
+        Nome da musica:  %1$s,
+        Artista: %2$s,
+        Album:  %3$s
+    </string>
+
+    <string name="titulo">Minhas Músicas</string>
+    <string name="bem_vindo_ao_app">Bem Vindo ao Musicfy!</string>
+    <string name="slogan">O que você quer ouvir hoje?</string>
+    <string name="senha_titulo">SENHA</string>
+    <string name="senha">Senha</string>
+    <string name="cadastro_musica">Cadastrar Musica</string>
+    <string name="minhas_musicas">Minhas Músicas</string>
+    <string name="add_musicas">Add Músicas</string>
+    <string name="adic_musicas">Adicionar Músicas</string>
+    <string name="save_musica">Salvar</string>
+    <string name="music_name">Nome da Música</string>
+    <string name="music_artist">Nome do Artista</string>
+    <string name="music_album">Nome do Album</string>
+
 </resources>

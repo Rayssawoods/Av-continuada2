@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddMusic"
+    android:background="@color/backgroundColor"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:backgroundTint="@color/purple"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+
+        >
+    </com.google.android.material.appbar.AppBarLayout>
+    <TextView
+        android:id="@+id/tv_titulo"
+        style="@style/Slogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/adic_musicas"
+        tools:ignore="MissingConstraints"
+        />
+    <EditText
+        android:id="@+id/et_nome_musica"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Input"
+        android:hint="@string/music_name"
+
+        />
+
+    <EditText android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_artista"
+        style="@style/Input"
+        android:hint="@string/music_artist"
+        />
+    <EditText android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_album"
+        android:hint="@string/music_album"
+        style="@style/Input"
+        />
+
+
+    <Button
+        android:id="@+id/bt_minhas_musicas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save_musica"
+        style="@style/Botao"
+
+
+        android:layout_alignParentLeft="true"
+        android:onClick="irSalvarMusica"
+
+        />
+</LinearLayout>
