@@ -30,6 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/Input"
+
         android:hint="@string/music_name"
 
         />
@@ -54,8 +55,6 @@
         android:layout_height="wrap_content"
         android:text="@string/save_musica"
         style="@style/Botao"
-
-
         android:layout_alignParentLeft="true"
         android:onClick="irSalvarMusica"
 

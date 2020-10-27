@@ -37,12 +37,12 @@ class MyMusicList : AppCompatActivity() {
 
 
 
-        //getFilmes é o endpoits que retorna uma call --preparação da chamada da api
+        //getMusics é o endpoits que retorna uma call --preparação da chamada da api
         val callMusic = requests.getMusics()
 
         callMusic.enqueue(object: Callback<List<Music>> {
             override fun onFailure(call: Call<List<Music>>, t: Throwable) {
-                Toast.makeText(applicationContext, "Deu ruim $t", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext,  getString(R.string.txt_erro), Toast.LENGTH_SHORT).show()
             }
 
             override fun onResponse(call: Call<List<Music>>, response: Response<List<Music>>) {
