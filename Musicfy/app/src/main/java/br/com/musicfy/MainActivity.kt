@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-
     fun irAdicionarMusica(component:View){
         val addMusicaActivity = Intent(this@MainActivity, AddMusic::class.java)
         startActivity(addMusicaActivity)

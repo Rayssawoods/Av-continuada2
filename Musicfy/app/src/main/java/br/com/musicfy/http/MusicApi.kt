@@ -10,9 +10,9 @@ interface MusicApi {
 
     @GET("/musics")
     fun getMusics(
-
     ): Call<List<Music>>
 
     @POST("/musics")
-    fun postMusica(@Body novaMusica: Music): Call<Void>
+    fun postMusica(@Body novaMusica: Music
+    ): Call<Void>
 }

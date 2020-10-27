@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
 
         <item name="colorPrimary">@color/purple</item>
         <item name="colorPrimaryVariant">@color/lightPurple</item>
         <item name="colorOnPrimary">@color/text_purple_base</item>
+
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/green</item>
+        <item name="colorSecondary">@color/text_purple_base</item>
         <item name="colorSecondaryVariant">@color/anotherGreen</item>
         <item name="colorOnSecondary">@color/text_in_purple</item>
 
     </style>
 
-    <style name="Titulo"  parent="@android:style/TextAppearance">
+    <style name="Titulo" parent="@android:style/TextAppearance">
         <item name="android:textColor">@color/text_purple_base</item>
         <item name="android:textSize">22sp</item>
         <item name="android:textAllCaps">true</item>
@@ -21,7 +23,7 @@
         <item name="android:layout_marginLeft">25dp</item>
     </style>
 
-    <style name="Slogan"  parent="@android:style/TextAppearance">
+    <style name="Slogan" parent="@android:style/TextAppearance">
         <item name="android:textColor">@color/purpleDark</item>
         <item name="android:textSize">22sp</item>
         <item name="android:textAllCaps">true</item>
@@ -49,11 +51,11 @@
 
     <!--  TEXTO  -->
     <style name="TextoLista">
-    <item name="android:textAllCaps">true</item>
-    <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">14sp</item>
     </style>
 
-
+    <!--  EDITTEXT  -->
     <style name="Input">
         <item name="android:textAllCaps">true</item>
         <item name="android:textColor">@color/purpleDark</item>

@@ -7,6 +7,14 @@
     android:background="@color/backgroundColor"
     android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/tv_titulo"
+        style="@style/Slogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo"
+        tools:ignore="MissingConstraints"
+        />
 
     <com.google.android.material.appbar.AppBarLayout
         style="@style/TextoLista"
@@ -34,14 +42,7 @@
 
         </ScrollView>
 
-        <TextView
-            android:id="@+id/tv_titulo"
-            style="@style/Titulo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/titulo"
-            tools:ignore="MissingConstraints"
-            />
+
     </com.google.android.material.appbar.AppBarLayout>
 
     <TextView

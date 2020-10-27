@@ -23,50 +23,67 @@ class AddMusic : AppCompatActivity() {
 
         val album = et_album.text.toString()
 
-        if (et_nome_musica.text.isBlank()) {
-            et_nome_musica.error = getString(R.string.nome_blank)
-            et_nome_musica.requestFocus()
+        when {
+            et_nome_musica.text.isBlank() -> {
+                et_nome_musica.error = getString(R.string.nome_blank)
+                et_nome_musica.requestFocus()
 
-        } else if (et_artista.text.isBlank()) {
-            et_artista.error = getString(R.string.artista_blank)
-            et_artista.requestFocus()
+            }
+            et_artista.text.isBlank() -> {
+                et_artista.error = getString(R.string.artista_blank)
+                et_artista.requestFocus()
 
-        } else if (et_album.text.isBlank()) {
-            et_album.error = getString(R.string.album_blank)
-            et_album.requestFocus()
+            }
+            et_album.text.isBlank() -> {
+                et_album.error = getString(R.string.album_blank)
+                et_album.requestFocus()
 
-
-        } else {
-            val retrofit = Retrofit.Builder()
-                    .baseUrl("https://5f861cfdc8a16a0016e6aacd.mockapi.io/musicfy-api/")
+            }
+            else -> {
+                val retrofit = Retrofit.Builder()
+                    .baseUrl("https://5f907b7ee0559c0016ad69ee.mockapi.io/musicas/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build()
 
-            val requests = retrofit.create(MusicApi::class.java)
+                val requests = retrofit.create(MusicApi::class.java)
 
-            val novaMusica = Music(
+                val novaMusica = Music(
                     null,
                     et_nome_musica.text.toString(),
                     et_artista.text.toString(),
                     et_album.text.toString()
-            )
+                )
 
-            val callAddMusic = requests.postMusica(novaMusica)
+                val callAddMusic = requests.postMusica(novaMusica)
 
-            callAddMusic.enqueue(object : Callback<Void> {
-                override fun onFailure(call: Call<Void>, t: Throwable) {
-                    Toast.makeText(baseContext,
+                callAddMusic.enqueue(object : Callback<Void> {
+                    override fun onFailure(call: Call<Void>, t: Throwable) {
+                        Toast.makeText(
+                            baseContext,
                             getString(R.string.txt_erro_cadastrado),
-                            Toast.LENGTH_SHORT).show()
-                }
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
 
-                override fun onResponse(call: Call<Void>, response: Response<Void>) {
-                    Toast.makeText(baseContext,
-                            getString(R.string.txt_cadastrado),
-                            Toast.LENGTH_SHORT).show()
-                }
+                    override fun onResponse(call: Call<Void>, response: Response<Void>) {
+                        Toast.makeText(
+                            baseContext,
+                            getString(R.string.txt_cadastrado) + response.code(),
+                            Toast.LENGTH_SHORT
+                        ).show()
 
-            })
+                        limpar()
+                    }
+                })
+            }
         }
+    }
+
+    fun limpar() {
+        et_nome_musica.requestFocus()
+        et_nome_musica.setText("")
+        et_artista.setText("")
+        et_album.setText("")
+
     }
 }

@@ -15,8 +15,6 @@
     <string name="titulo">Minhas Músicas</string>
     <string name="bem_vindo_ao_app">Bem Vindo ao Musicfy!</string>
     <string name="slogan">Você é o que você ouve!</string>
-    <string name="senha_titulo">SENHA</string>
-    <string name="senha">Senha</string>
     <string name="cadastro_musica">Cadastrar Musica</string>
     <string name="minhas_musicas">Minhas Músicas</string>
     <string name="add_musicas">Add Músicas</string>
@@ -25,6 +23,7 @@
     <string name="music_name">Nome da Música</string>
     <string name="music_artist">Nome do Artista</string>
     <string name="music_album">Nome do Album</string>
+
 
     <string name="nome_blank">Ei! Não pode esquecer o nome da música, né?</string>
     <string name="artista_blank">Poxa, precisamos saber o artista!</string>
