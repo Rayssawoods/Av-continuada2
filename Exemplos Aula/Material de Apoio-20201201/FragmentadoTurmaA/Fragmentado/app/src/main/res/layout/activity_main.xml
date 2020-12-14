@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ensinamentos aleatórios"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/tv_topo"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_topo"
+        android:id="@+id/bt_suave"
+        android:onClick="trazerEnsinamentoSuave"
+        android:text="Ensinamento suave"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/bt_suave"
+        android:id="@+id/bt_forte"
+        android:onClick="trazerEnsinamentoForte"
+        android:text="Ensinamento forte"/>
+
+    <!--
+    Para usar Fragments, usamos a tag FrameLayout
+    -->
+    <FrameLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/bt_forte"
+        android:id="@+id/fr_ensinamento">
+
+        <!--
+        Caso precisemos ter uma Fragment logo de inicio numa FrameLayout
+        usamos a tag <fragment>
+        -->
+        <fragment
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            class="br.com.bandtec.fragmentado.FragmentoInicial"
+            android:id="@+id/fr_inicial"/>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
